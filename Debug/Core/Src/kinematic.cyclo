@@ -1,0 +1,6 @@
+../Core/Src/kinematic.c:12:6:orien_init	1
+../Core/Src/kinematic.c:21:6:omni_init	1
+../Core/Src/kinematic.c:30:6:test_omni_set_motor_speed_90	1
+../Core/Src/kinematic.c:40:6:omni45_kinematic	1
+../Core/Src/kinematic.c:47:6:omni45_kinematic_pose	1
+../Core/Src/kinematic.c:56:6:omni45_kinematic2	1
