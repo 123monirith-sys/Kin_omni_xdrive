@@ -20,8 +20,8 @@ void orien_init(ORIEN *orien){
 
 void omni_init(OMNIWHEEL *omni)
 {
-	omni->r = 0.122f;//unit as m
-	omni->l = 0.31f;//unit as m
+	omni->r = 0.065f;//unit as m
+	omni->l = 0.57f;//unit as m
 	omni->motor_max_speed = 600.0f;//full speed  rpm
 	omni->wheel_speed_max = 90.0f;//robot max speed rpm
 

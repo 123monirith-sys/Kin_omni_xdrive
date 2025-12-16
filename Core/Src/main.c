@@ -66,6 +66,7 @@ float vx=0.0f, vy =0.0f,omega =0.0f,r =0.122f;
 float x=0.0f,y=0.0f,theta =0.0f;
 float x_dir=0.0f,y_dir=0.0f,theta_dir =0.0f;
 volatile Dwheel can;
+uint8_t state =1;
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -139,7 +140,6 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim){
 	pose_dir.y=y_dir;
 	pose_dir.theta=theta_dir;
 
-	//
 	omni45_kinematic2(&controller, &omni, wheel_speed);
 	//omni45_kinematic_pose(&pose_dir, &omni, wheel_speed);
 	}
@@ -214,8 +214,72 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  //control
-//	  can_data_send();
+
+	/* if (state == 1){
+		 //HAL_Delay(500);
+		 vx = 0;
+		 vy =0;
+		 omega =0;
+		 HAL_Delay(1000);
+
+	 }
+	 else if(state == 2){
+		 vx = 2;
+		 vy =0;
+		 omega =0;\
+		 HAL_Delay(1000);
+	 }
+	 else if(state ==3 ){
+		 vx = 0;
+		 vy =2;
+	     omega =0;}
+
+
+*/
+	  vx = 0;
+	  vy =0;
+	  omega =0;
+	  HAL_Delay(5000);
+//	  vx = 0.4;
+//	  vy =0;
+//	  omega =0;
+//	  HAL_Delay(500);
+//	  vx = 0.88;
+//	  vy =0;
+//	  omega =0;
+//	  HAL_Delay(500);
+
+	  vx = 0.5;
+	  vy =0;
+	  omega =3.14/1.37;
+	  HAL_Delay(2000);
+/*
+	 	  vx = -0.8;
+	 	  vy =-0.8;
+	 	  omega =0;
+	 HAL_Delay(2000);
+
+//	 	  vx = 0.44;
+//	 	  vy =0;
+//	 	  omega =0;
+//	 	  HAL_Delay(500);
+	  vx = 0.8;
+	 	  vy =0.8;
+	 	  omega =0;
+	 HAL_Delay(2000);
+	  vx = -0.8;
+	 	  vy =0.8;
+	 	  omega =0;
+	 HAL_Delay(2000);*/
+
+	 	vx = 0;
+	 	vy =0;
+	 	omega =0;
+	 HAL_Delay(2000);
+
+
+
+
 
   }
   /* USER CODE END 3 */
